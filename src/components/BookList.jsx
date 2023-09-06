@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import SingleBook from "./SingleBook";
-import FantasyBooks from "../books/fantasy.json";
 import { Container, Form, Row } from "react-bootstrap";
 
 class BookList extends Component {
@@ -13,7 +12,8 @@ class BookList extends Component {
   };
 
   render() {
-    const FilteredBooks = FantasyBooks.filter(book =>
+    const { books } = this.props;
+    const FilteredBooks = books.filter(book =>
       book.title.toLowerCase().includes(this.state.searchedBook.toLowerCase())
     );
     return (

@@ -5,13 +5,14 @@ import MyFooter from "./components/MyFooter";
 import MyWelcome from "./components/MyWelcome";
 // import AllTheBooks from "./components/AllTheBooks";
 import BookList from "./components/BookList";
+import FantasyBooks from "./books/fantasy.json";
 
 function App() {
   return (
     <div className="App">
       <MyNav />
       <MyWelcome />
-      <BookList />
+      <BookList books={FantasyBooks} />
       <MyFooter />
     </div>
   );
