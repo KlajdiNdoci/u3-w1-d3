@@ -11,7 +11,7 @@ class SingleBook extends Component {
   };
   render() {
     const { book } = this.props;
-    const bookBgColor = this.state.selected ? "selected-book" : "";
+    const bookBgColor = this.state.selectedBook ? "selected-book" : "";
     return (
       <Col md={3} className="mb-3">
         <Card className={bookBgColor} onClick={this.handleBookClick}>
